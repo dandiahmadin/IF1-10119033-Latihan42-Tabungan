@@ -15,19 +15,14 @@ import java.util.Scanner;
  * Deskripsi Program : Program ini berisi Tabungan dengan pendekatan object oriented
  */
 public class Main {
-    private static int saldo, jumlah;
-    
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
         System.out.println("====Program Penarikan Uang====");
         System.out.print("Masukan Saldo Awal : ");
-        saldo = input.nextInt();
+        Tabungan tabungan1 = new Tabungan(input.nextInt());
         
         System.out.print("Jumlah uang yang diambil : ");
-        jumlah = input.nextInt();
-        
-        Tabungan tabungan1 = new Tabungan(saldo);
-        System.out.println("Saldo Anda Sekarang : " + tabungan1.ambilUang(jumlah));
+        System.out.println("Saldo Anda Sekarang : " + tabungan1.ambilUang(input.nextInt()));
     }
 }

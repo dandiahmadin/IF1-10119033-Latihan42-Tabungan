@@ -21,6 +21,6 @@ public class Tabungan {
     }
     
     public int ambilUang(int jumlah) {
-        return this.saldo - jumlah; 
+        return saldo - jumlah; 
     }
 }
